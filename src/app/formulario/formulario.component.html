@@ -1,0 +1,9 @@
+<form class="theme-form"  [formGroup]="frmData" (ngSubmit)="sbm()">
+  <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
+  <select name="select">
+    <option value="value1">Value 1</option>
+    <option value="value2" selected>Value 2</option>
+    <option value="value3">Value 3</option>
+  </select>
+  <button type="submit" class="btn btn-solid btn-sm"> Enviar </button>
+</form>
