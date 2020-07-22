@@ -1,9 +1,25 @@
 <form class="theme-form"  [formGroup]="frmData" (ngSubmit)="sbm()">
-  <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
+  <!-- <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
   <select name="select">
     <option value="value1">Value 1</option>
     <option value="value2" selected>Value 2</option>
     <option value="value3">Value 3</option>
-  </select>
+  </select> -->
+  <div>
+    <label>Checkbox</label>
+    <input type="checkbox" name="chkb" id="chkb" formControlName="chkb" (change)="chkbCh($event)">
+  </div>
+  {{chkbstatus}}--
+  <div *ngIf="chkbstatus">
+    <div>
+      <label>Date 1 </label>
+      <input type="date" name="d1" id="d1" formControlName="d1" (change)="DateSel($event)">
+    </div>
+    <div>
+      <label>Date 2 </label>          
+      <input type="date" name="d2" id="d2" formControlName="d2"  [min]="d1" [attr.disabled]="d2dis ? '' : null">
+    </div>
+  </div>
+  <hr>
   <button type="submit" class="btn btn-solid btn-sm"> Enviar </button>
 </form>
