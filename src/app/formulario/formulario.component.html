@@ -7,7 +7,7 @@
   </select> -->
   <div>
     <label>Checkbox</label>
-    <input type="checkbox" name="chkb" id="chkb" formControlName="chkb" (change)="chkbCh($event)">
+    <input type="checkbox" class="chkb" name="chkb" id="chkb" formControlName="chkb" (change)="chkbCh($event)">
   </div>
   {{chkbstatus}}--
   <div *ngIf="chkbstatus">

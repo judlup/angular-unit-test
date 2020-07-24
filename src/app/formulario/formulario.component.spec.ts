@@ -23,28 +23,16 @@ describe('FormularioComponent', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
-
-  // it('should render select values', () => {
-  //   const fixture = TestBed.createComponent(FormularioComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.debugElement.nativeElement;
-  //   expect(compiled.querySelector('select').textContent).toContain('Value 2');
-  // });
-
   it("Checkbox should not selected", () => {
     expect(component.frmData.controls['chkb'].value).toBeFalsy();
   })
 
   it("Checkbox should not selected", () => {
-    let checkbox = component.frmData.controls['chkb'].setValue(true);
-    
-    // component.chkbstatus = component.frmData.controls['chkb'].value        
-    fixture.detectChanges();
-    // expect(component.chkbstatus).toBeTruthy();    
-    // expect(component.frmData.controls['chkb'].value).toBeTruthy();    
+    const checkbox = fixture.debugElement.nativeElement.querySelector('.chkb');
+    checkbox.click();
+    fixture.detectChanges();    
+    expect(checkbox).toBeTruthy();
+          
   })
 
 
